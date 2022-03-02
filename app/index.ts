@@ -68,6 +68,11 @@ const syncSubscription = (subscriptionData: Subscription) => {
                                 .setURL(`https://www.vinted.fr/transaction/buy/new?source_screen=item&transaction%5Bitem_id%5D=${item.id}`)
                                 .setEmoji('💸')
                                 .setStyle('LINK')
+                            new Discord.MessageButton()
+                                .setLabel('Envoyez un Message')
+                                .setURL(`https://www.vinted.fr//items/${item.id}/want_it/new?button_name=receiver_id=${item.id}`)
+                                .setEmoji('📨')
+                                .setStyle('LINK')
                         ])
                 ] });
             }
